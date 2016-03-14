@@ -67,4 +67,9 @@
       <value>{{aws_secret_access_key}}</value>
   </property>
 
+  <property>
+      <name>fs.s3.maxRetries</name>
+      <value>10</value>
+  </property>
+
 </configuration>

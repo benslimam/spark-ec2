@@ -18,6 +18,11 @@
   </property>
 
   <property>
+    <name>fs.s3a.impl</name>
+    <value>org.apache.hadoop.fs.s3a.S3AFileSystem</value>
+  </property>
+
+  <property>
     <name>hadoop.tmp.dir</name>
     <value>/mnt/ephemeral-hdfs</value>
   </property>
@@ -68,8 +73,32 @@
   </property>
 
   <property>
+    <name>fs.s3a.access.key</name>
+    <value>{{aws_access_key_id}}</value>
+  </property>
+
+  <property>
+    <name>fs.s3a.secret.key</name>
+    <value>{{aws_secret_access_key}}</value>
+  </property>
+
+  <property>
       <name>fs.s3.maxRetries</name>
       <value>10</value>
+  </property>
+
+  <property>
+    <name>fs.s3a.buffer.dir</name>
+    <value>/root/spark/work,/tmp</value>
+  </property>
+
+  <property>
+    <name>fs.s3a.fast.upload</name>
+    <value>false</value>
+    <description>Upload directly from memory instead of buffering to
+    disk first. Memory usage and parallelism can be controlled as up to
+    fs.s3a.multipart.size memory is consumed for each (part)upload actively
+    uploading (fs.s3a.threads.max) or queueing (fs.s3a.max.total.tasks)</description>
   </property>
 
 </configuration>

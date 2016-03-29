@@ -145,4 +145,8 @@ else
   mv `ls -d spark-* | grep -v ec2` spark
 fi
 
+wget http://central.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.7.1/hadoop-aws-2.7.1.jar
+mkdir hadoopaws
+mv hadoop-aws-2.7.1.jar hadoopaws
+
 popd > /dev/null

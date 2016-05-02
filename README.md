@@ -1,4 +1,4 @@
-spark-ec2
+cccspark-ec2
 =========
 
 This repository contains the set of scripts used to setup a Spark cluster on
